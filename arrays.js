@@ -138,3 +138,29 @@ for (let i = 0; i < countries.length; i++) {
 // concat the word "are big countries" to the countries array
 
 console.log(countries.join(",") + " are big countries");
+
+// check if the array has a seven if there is a seve return "Boom!" if not return "There is no seven in the array"
+function CheckSeven(arr) {
+  if (arr.join("").includes(7)) {
+    return "Boom!";
+  } else {
+    return "There is no seven in the array";
+  }
+}
+
+console.log(CheckSeven([1, 2, 3, 7, 8, 5, 4, 9]));
+console.log(CheckSeven([1, 2, 3, 8, 5, 4, 9]));
+console.log(CheckSeven([, 2, 3, 87, 55, 43, 911]));
+
+const newArr = [1, 2, 3, 5, 8, 7];
+console.log(newArr);
+console.log(...newArr);
+
+function minMax(arr) {
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let newArr = [min, max];
+  return newArr;
+}
+
+console.log(minMax([1000, 4, 5, 8, 9, 7]));
